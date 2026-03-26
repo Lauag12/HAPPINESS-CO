@@ -125,7 +125,7 @@ INSERT INTO favoritos VALUES (20251212002,6);
 CREATE VIEW galerias_anteriores AS
     SELECT galerias.*
     FROM galerias, eventos
-    WHERE (eventos.fecha < "2026-02-28") and (galerias.id_evento = eventos.id_eventos);
+    WHERE (eventos.fecha < '28-02-2026') and (galerias.id_evento = eventos.id_eventos);
  
 -- Visualizamos la vista
 SELECT * 
