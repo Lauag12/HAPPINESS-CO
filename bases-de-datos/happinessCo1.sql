@@ -167,3 +167,5 @@ CREATE VIEW vista_fav_u2_prox AS
     
       SELECT*
   FROM vista_fav_u2_prox;
+  
+ 
