@@ -1,8 +1,4 @@
-
-
-/**
- *
- * @author ALUMNOS-FP
+* @author ALUMNOS-FP
      * @version 1.0
      */
     public class Galerias {
@@ -97,3 +93,4 @@
         }
 
     }
+

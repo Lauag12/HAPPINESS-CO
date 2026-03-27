@@ -9,13 +9,17 @@ package happinessco;
  *
  * @author ALUMNOS-FP
  */
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Scanner;
 public class HappinessCo {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        //------------------------ESTRUCTURA DE DATOS--------------------
+        private static final HashMap<String, Usuario> usuarios  = new HashMap<> ();
+        
     }
     
 }
