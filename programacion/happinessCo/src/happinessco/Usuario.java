@@ -1,4 +1,3 @@
-
 /**
  *
  * @author ALUMNOS-FP
@@ -100,13 +99,9 @@ public class Usuario {
      *
      * @return String con formato legible de los datos del usuario
      */
-    @Override
+      @Override
     public String toString() {
-
-        // No se incluye la contraseña "password" por seguridad
-        return "Usuario:\n"
-                + "nombre: " + nombre + "\n"
-                + "email: " + email + "\n";
+        return "Usuario{" + "nombre='" + nombre + "', email='" + email + "'}";
     }
 }
 

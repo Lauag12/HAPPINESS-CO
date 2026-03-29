@@ -1,4 +1,4 @@
-/**
+    /**
  *
  * @author ALUMNOS-FP
  */
@@ -63,7 +63,7 @@ public class Favorito {
     */
    @Override
    public String toString() {
-       return "Favorito{" + "correoUsuario='" + correoUsuario + '\'' + ", idEvento=" + idEvento +'}';
+       return "Favorito{" + "correoUsuario='" + correoUsuario + "', idEvento=" + idEvento +"}";
    }
 }
 

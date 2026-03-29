@@ -1,4 +1,5 @@
 
+import happinessCo.Galeria;
 import java.util.ArrayList;
 
 /**
@@ -13,7 +14,7 @@ public class Eventos {
     private String titulo;                  // Título descriptivo del evento
     private String ubicacion;               // Lugar donde se realiza el evento
     private String descripcion;             // Descripción detallada del evento
-    private ArrayList<Galerias> galerias;    // Lista de galerías asociadas al evento, la cual cambio el nombre por 
+    private ArrayList<Galeria> galerias;    // Lista de galerías asociadas al evento, la cual cambio el nombre por 
     // --------------------- CONSTRUCTORES ---------------------
 
     /**
@@ -84,9 +85,9 @@ public class Eventos {
 
     /**
      * Obtiene la lista de galerías del evento
-     * @return ArrayList<Galerias> con todas las galerías
+     * @return ArrayList<Galeria> con todas las galerías
      */
-    public ArrayList<Galerias> getGalerias() {
+    public ArrayList<Galeria> getGalerias() {
         return galerias;
     }
     // --------------------- SETTERS ---------------------
@@ -135,7 +136,7 @@ public class Eventos {
      * Establece la lista completa de galerías
      * @param galerias Nueva lista de galerías
      */
-    public void setGalerias(ArrayList<Galerias> galerias) {
+    public void setGaleria(ArrayList<Galeria> galerias) {
         this.galerias = galerias;
     }
     // --------------------- MÉTODOS AUXILIARES ---------------------
@@ -144,7 +145,7 @@ public class Eventos {
      * Agrega una galería a la lista del evento Método de conveniencia para no acceder directamente a la lista
      * @param galeria Galería a agregar
      */
-    public void agregarGaleria(Galerias galeria) {
+    public void agregarGaleria(Galeria galeria) {
     if (galeria != null) {
         this.galerias.add(galeria);
     } else {
@@ -167,7 +168,7 @@ public class Eventos {
      * @param idGaleria ID de la galería a buscar
      * @return Galeria encontrada o null si no existe
      */
-public Galerias buscarGaleria(int idGaleria) {
+public Galeria buscarGaleria(int idGaleria) {
     for (int i = 0; i < galerias.size(); i++) { //es el .length de arraylist
         if (galerias.get(i).getId() == idGaleria) {
             return galerias.get(i);

@@ -1,7 +1,9 @@
-* @author ALUMNOS-FP
+/** @author ALUMNOS-FP
      * @version 1.0
      */
-    public class Galerias {
+package happinessCo; 
+
+    public class Galeria {
 
         // ------------------ ATRIBUTOS ------------------
         private int id;         // Id único de la galería.
@@ -13,7 +15,7 @@
          * Constructor vacío
          * Permite crear una galería sin inicializar valores
          */
-        public Galerias() {
+        public Galeria() {
 
             // Constructor vacío - atributos quedan en valores por defecto
             // int queda en 0, String queda en null
@@ -26,7 +28,7 @@
          * @param titulo Título de la galería
          * @param idEvento ID del evento al que pertenece
          */
-        public Galerias(int id, String titulo, int idEvento) {
+        public Galeria(int id, String titulo, int idEvento) {
             this.id = id;               // Asigna el ID
             this.titulo = titulo;       // Asigna el título
             this.idEvento = idEvento;   // Asigna el ID del evento
@@ -89,7 +91,7 @@
          */
         @Override
         public String toString() {
-            return "Galeria{" + "id=" + id + ", titulo='" + titulo + '\''+ ", idEvento=" + idEvento + '}';
+            return "Galeria{" + "id=" + id + ", titulo='" + titulo + ", idEvento='" + idEvento + "'}";
         }
 
     }
