@@ -1,12 +1,12 @@
+package happinessco; 
 
-import happinessCo.Galeria;
 import java.util.ArrayList;
 
 /**
  *
  * @author ALUMNOS-FP
  */
-public class Eventos {
+public class Evento {
     // --------------------- ATRIBUTOS ---------------------
 
     private int id;                         // Identificador único del evento ()
@@ -20,7 +20,7 @@ public class Eventos {
     /**
      * Constructor vacío se inicializa la lista de galerías como ArrayList vacia
      */
-    public Eventos() {
+    public Evento() {
         this.galerias = new ArrayList<>();
     }
 
@@ -33,7 +33,7 @@ public class Eventos {
      * @param ubicacion Lugar del evento
      * @param descripcion Descripción del evento
      */
-    public Eventos(int id, String fecha, String titulo, String ubicacion, String descripcion) {
+    public Evento(int id, String fecha, String titulo, String ubicacion, String descripcion) {
         this.id = id;                       // Asigna el ID
         this.fecha = fecha;                 // Asigna la fecha
         this.titulo = titulo;               // Asigna el título

@@ -1,4 +1,5 @@
-/**
+
+package happinessco; /**
  *
  * @author ALUMNOS-FP
  */
@@ -94,8 +95,8 @@ public class Usuario {
 
     /**
      * Devuelve una representación en texto del objeto Usuario Sobreescribe
-     * (@Override) el método toString de la clase Object Se llama
-     * automáticamente cuando se imprime el objeto con System.out.println()
+ (@Override) el método toString de la clase Object Se llama
+ automáticamente cuando se imprime el objeto con System.out.println()
      *
      * @return String con formato legible de los datos del usuario
      */

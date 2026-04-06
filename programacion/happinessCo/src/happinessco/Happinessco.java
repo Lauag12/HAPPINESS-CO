@@ -1,4 +1,4 @@
-package happinessCo;
+package happinessco;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,11 +8,11 @@ import java.util.Scanner;
  * Clase principal que administra el sistema de eventos mediante un menú en
  * consola.
  */
-public class HappinessCo {
+public class Happinessco {
 
     // Estructuras de datos principales
     private static final HashMap<String, Usuario> usuarios = new HashMap<>();
-    private static final HashMap<Integer, Eventos> eventos = new HashMap<>();
+    private static final HashMap<Integer, Evento> eventos = new HashMap<>();
     private static final ArrayList<Favorito> favoritos = new ArrayList<>();
 
     // Contadores autogenerados
@@ -20,7 +20,7 @@ public class HappinessCo {
     private static int contadorGalerias = 0;
 
     // Entrada de datos
-    private static final Scanner scanner = new Scanner(System.in);
+    private static final Scanner teclado = new Scanner(System.in);
 
     public static void main(String[] args) {
         int opcion;
@@ -72,7 +72,7 @@ public class HappinessCo {
         } while (opcion != 9);
     }
 
-    private static int leerEntero(String mensaje, Scanner teclado) {
+    private static int leerEntero(String mensaje) {
         while (true) {
             try {
                 System.out.print(mensaje);
@@ -80,7 +80,7 @@ public class HappinessCo {
                 teclado.nextLine(); // Limpiamos el buffer tras el número
                 return numero;
             } catch (Exception e) {
-                System.out.println("❌ Error: Por favor, ingrese un número entero válido.");
+                System.out.println("Error: Por favor, ingrese un número entero válido.");
                 teclado.nextLine(); // Limpiamos el buffer para descartar la letra/texto erróneo
             }
         }
@@ -100,7 +100,7 @@ public class HappinessCo {
             if (entrada.length() > 0) {  // Si la longitud es mayor a 0, significa que tiene texto
                 return entrada;
             }
-            System.out.println("❌ Error: Este campo no puede estar vacío."); // Si llegó aquí es porque mide 0 (está vacía)
+            System.out.println("Error: Este campo no puede estar vacío."); // Si llegó aquí es porque mide 0 (está vacía)
         }
     }
 
@@ -110,7 +110,7 @@ public class HappinessCo {
      * Añade un nuevo usuario al sistema. Solicita nombre, email y contraseña.
      * Valida que el email no exista previamente.
      */
-    private static void añadirUsuario() {
+    private static void agregarUsuario() {
         System.out.println("\n--- AÑADIR USUARIO ---");
 
         // 1. Pedimos los datos usando tu función leerCadena
@@ -119,17 +119,17 @@ public class HappinessCo {
         String password = leerCadena("Contraseña: ");
 
         // 2. Intentamos SACAR al usuario del mapa
-        Usuario usuario = usuarios.get(email);
+       Usuario usuario = usuarios.get(email);
 
         // 3. Lo más sencillo: ¿Es nulo? 
         if (usuario == null) {
             // Si es nulo, el email está libre -> Guardamos
             Usuario nuevo = new Usuario(nombre, email, password);
             usuarios.put(email, nuevo);
-            System.out.println("✅ Guardado correctamente.");
+            System.out.println("Guardado correctamente.");
         } else {
             // Si NO es nulo, es porque ya existe alguien
-            System.out.println("❌ El usuario ya existe.");
+            System.out.println("El usuario ya existe.");
         }
     }
 
@@ -139,9 +139,9 @@ public class HappinessCo {
 
         // Intentamos borrar directamente
         if (usuarios.remove(email) != null) {
-            System.out.println("✅ Usuario eliminado.");
+            System.out.println("Usuario eliminado.");
         } else {
-            System.out.println("❌ No se encontró ese email.");
+            System.out.println("No se encontró ese email.");
         }
     }
 
@@ -150,35 +150,35 @@ public class HappinessCo {
      * Añade un nuevo evento al sistema. El ID se genera automáticamente usando
      * el contador. Solicita fecha, título, ubicación y descripción.
      */
-private static void añadirEvento() {
-    String respuesta;
+    private static void agregarEvento() {
+        String respuesta;
 
-    do {
-        System.out.println("\n--- NUEVO EVENTO (ID: " + contadorEventos + ") ---");
+        do {
+            System.out.println("\n--- NUEVO EVENTO (ID: " + contadorEventos + ") ---");
 
-        // 1. Pedimos los datos
-        String fecha = leerCadena("Fecha: ");
-        String titulo = leerCadena("Título: ");
-        String ubicacion = leerCadena("Ubicación: ");
-        String descripcion = leerCadena("Descripción: ");
+            // 1. Pedimos los datos
+            String fecha = leerCadena("Fecha: ");
+            String titulo = leerCadena("Título: ");
+            String ubicacion = leerCadena("Ubicación: ");
+            String descripcion = leerCadena("Descripción: ");
 
-        // 2. Creamos y guardamos (usando el contador actual)
-        Evento nuevoEvento = new Evento(contadorEventos, fecha, titulo, ubicacion, descripcion);
-        eventos.put(contadorEventos, nuevoEvento);
-        
-        System.out.println("✅ Evento '" + titulo + "' guardado con ID " + contadorEventos);
+            // 2. Creamos y guardamos (usando el contador actual)
+            Evento nuevoEvento = new Evento(contadorEventos, fecha, titulo, ubicacion, descripcion);
+            eventos.put(contadorEventos, nuevoEvento);
 
-        // 3. Aumentamos el contador para el siguiente
-        contadorEventos++;
+            System.out.println("✅ Evento '" + titulo + "' guardado con ID " + contadorEventos);
 
-        // 4. ¿Desea continuar?
-        System.out.print("\n¿Quieres añadir otro evento? (s/n): ");
-        respuesta = teclado.nextLine().trim().toLowerCase();
+            // 3. Aumentamos el contador para el siguiente
+            contadorEventos++;
 
-    } while (respuesta.equals("s")); 
-    
-    System.out.println("↩️ Volviendo al menú principal...");
-} 
+            // 4. ¿Desea continuar?
+            System.out.print("\n¿Quieres añadir otro evento? (s/n): ");
+            respuesta = teclado.nextLine().trim().toLowerCase();
+
+        } while (respuesta.equals("s"));
+
+        System.out.println("Volviendo al menú principal...");
+    }
 
     // ---------- FUNCIÓN 4: ELIMINAR EVENTO ----------
     /**
@@ -208,7 +208,7 @@ private static void añadirEvento() {
             eventos.remove(id);
 
             // Eliminamos los favoritos asociados a este evento
-            favoritos.removeIf(fav -> fav.getIdEvento() == id);
+            favoritos.removeIf(fav -> fav.getIdEvento() == (int) id);
 
             System.out.println("Evento eliminado correctamente");
         }
@@ -219,7 +219,7 @@ private static void añadirEvento() {
      * Añade una galería a un evento existente. El ID de la galería se genera
      * automáticamente.
      */
-    private static void añadirGaleria() {
+    private static void agregarGaleria() {
         System.out.println("--- AÑADIR GALERÍA ---");
 
         // Verificamos si hay eventos registrados
@@ -314,7 +314,7 @@ private static void añadirEvento() {
      * Añade un favorito (relación usuario-evento). Valida que tanto el usuario
      * como el evento existan.
      */
-    private static void añadirFavorito() {
+    private static void agregarFavorito() {
         System.out.println("--- AÑADIR FAVORITO ---");
 
         // Verificamos que existan usuarios y eventos
@@ -407,33 +407,45 @@ private static void añadirEvento() {
         }
     }
 
-    // ==================== MÉTODOS AUXILIARES DE VISUALIZACIÓN ====================
+    // ------------------------ MÉTODOS AUXILIARES DE VISUALIZACIÓN ------------------------
     /**
      * Muestra todos los usuarios registrados en formato tabular.
      */
     private static void mostrarUsuarios() {
         System.out.println("\n--- USUARIOS REGISTRADOS ---");
 
-        // Verificamos si hay usuarios
-        if (usuarios.isEmpty()) {
+        if (usuarios == null || 0 == usuarios.size()) { // Verificamos si hay usuarios
             System.out.println("No hay usuarios registrados.");
             return;
         }
 
         // Encabezado de la tabla
         System.out.println(String.format("%-30s | %-20s", "EMAIL", "NOMBRE"));
-        // String.format permite crear cadenas con formato
-        // %-30s significa: string, 30 caracteres de ancho, alineado a la izquierda
-        System.out.println("-".repeat(53));  // Línea separadora
-        // repeat() crea una cadena repitiendo el carácter n veces
+        // String.format permite crear cadenas con formato y %-30s significa: string, 30 caracteres de ancho, alineado a la izquierda
+        System.out.println("----------------------------------------------");
 
-        // Recorremos los valores del HashMap
-        // values() retorna una colección con todos los valores (objetos Usuario)
-        for (Usuario usuario : usuarios.values()) {
-            System.out.println(String.format("%-30s | %-20s",
-                    usuario.getEmail(),
-                    usuario.getNombre()));
-        }
+        // Iteración sobre los valores
+        usuarios.values().forEach((Usuario usuario) -> {
+            String email;
+            String nombre;
+            
+            // --- Lógica para el EMAIL ---
+            if (usuario.getEmail() != null) {
+                email = usuario.getEmail();
+            } else {
+                email = "Sin email";
+            }
+            
+            // --- Lógica para el NOMBRE ---
+            if (usuario.getNombre() != null) {
+                nombre = usuario.getNombre();
+            } else {
+                nombre = "Sin nombre";
+            }
+            
+            // Imprimimos la fila con los datos ya validados
+            System.out.println(String.format("%-30s | %-20s", email, nombre));
+        });
     }
 
     /**
@@ -442,25 +454,50 @@ private static void añadirEvento() {
     private static void mostrarEventos() {
         System.out.println("\n--- EVENTOS REGISTRADOS ---");
 
-        if (eventos.isEmpty()) {
+        // 1. Verificación sin .isEmpty() y con control de nulos
+        if (eventos == null || eventos.isEmpty()) {
             System.out.println("No hay eventos registrados.");
             return;
         }
 
-        // Encabezado
-        System.out.println(String.format("%-5s | %-12s | %-20s | %-15s",
-                "ID", "FECHA", "TÍTULO", "UBICACIÓN"));
-        System.out.println("-".repeat(60));
+        // 2. Definimos el formato una sola vez
+        // %-5d es para enteros (digitos), los demás %s para Strings
+        String formato = "%-5d | %-12s | %-20s | %-15s";
 
-        // Recorremos los eventos
-        for (Evento evento : eventos.values()) {
-            System.out.println(String.format("%-5d | %-12s | %-20s | %-15s",
-                    evento.getId(),
-                    evento.getFecha(),
-                    // Truncamos el título si es muy largo
-                    truncar(evento.getTitulo(), 20),
-                    truncar(evento.getUbicacion(), 15)));
-        }
+        // Encabezado
+        System.out.println(String.format("%-5s | %-12s | %-20s | %-15s", "ID", "FECHA", "TÍTULO", "UBICACIÓN"));
+        System.out.println("---------------------------------------------------------");
+
+        // 3. Recorremos los eventos
+        eventos.values().forEach((evento) -> {
+            // --- Validación de Fecha ---
+            String fecha;
+            if (evento.getFecha() != null) {
+                fecha = evento.getFecha();
+            } else {
+                fecha = "Sin fecha";
+            }
+
+            // --- Validación y Truncado de Título ---
+            String titulo;
+            if (evento.getTitulo() != null) {
+                titulo = truncar(evento.getTitulo(), 20);
+            } else {
+                titulo = "Sin título";
+            }
+
+            // --- Validación y Truncado de Ubicación ---
+            String ubicacion;
+            if (evento.getUbicacion() != null) {
+                ubicacion = truncar(evento.getUbicacion(), 15);
+            } else {
+                ubicacion = "Sin ubicación";
+            }
+
+            // 4. Impresión de la fila
+            // Usamos %-5d para el ID porque es un número (int o long)
+            System.out.println(String.format(formato, evento.getId(), fecha, titulo, ubicacion));
+        });
     }
 
     /**
@@ -469,26 +506,43 @@ private static void añadirEvento() {
      * @param evento El evento cuyas galerías se mostrarán
      */
     private static void mostrarGaleriasDeEvento(Evento evento) {
+        // 1. Verificación de seguridad: ¿Existe el objeto evento?
+        if (evento == null) {
+            System.out.println("Error: El evento no existe.");
+            return;
+        }
+
         System.out.println("\n--- GALERÍAS DEL EVENTO '" + evento.getTitulo() + "' ---");
 
-        // Obtenemos la lista de galerías del evento
+        // 2. Obtenemos la lista de galerías
         ArrayList<Galeria> galerias = evento.getGalerias();
 
-        if (galerias.isEmpty()) {
+        // 3. Verificamos la lista sin usar .isEmpty()
+        if (galerias == null || galerias.isEmpty()) {
             System.out.println("Este evento no tiene galerías.");
             return;
         }
 
+        // 4. Definimos el formato
+        String formato = "%-5d | %-30s";
+
         // Encabezado
         System.out.println(String.format("%-5s | %-30s", "ID", "TÍTULO"));
-        System.out.println("-".repeat(40));
+        System.out.println("-----------------------------------");
 
-        // Recorremos las galerías
-        for (Galeria galeria : galerias) {
-            System.out.println(String.format("%-5d | %-30s",
-                    galeria.getId(),
-                    truncar(galeria.getTitulo(), 30)));
-        }
+        // 5. Recorremos las galerías (ArrayList)
+        galerias.forEach((galeria) -> {
+            // Validación de título nulo antes de truncar
+            String titulo;
+            if (galeria.getTitulo() != null) {
+                titulo = truncar(galeria.getTitulo(), 30);
+            } else {
+                titulo = "Sin título";
+            }
+
+            // Impresión con el formato definido
+            System.out.println(String.format(formato, galeria.getId(), titulo));
+        });
     }
 
     /**
@@ -497,28 +551,42 @@ private static void añadirEvento() {
     private static void mostrarFavoritos() {
         System.out.println("\n--- FAVORITOS REGISTRADOS ---");
 
-        if (favoritos.isEmpty()) {
+        // 1. Verificación de la lista de favoritos (sin isEmpty)
+        if (favoritos == null || favoritos.isEmpty()) {
             System.out.println("No hay favoritos registrados.");
             return;
         }
 
+        // 2. Definimos el formato de la tabla  // %-30s (Email), %-10d (ID numérico), %-20s (Título)
+        String formato = "%-30s | %-10d | %-20s";
+
         // Encabezado
-        System.out.println(String.format("%-30s | %-10s | %-20s",
-                "EMAIL USUARIO", "ID EVENTO", "TÍTULO EVENTO"));
-        System.out.println("-".repeat(65));
+        System.out.println(String.format("%-30s | %-10s | %-20s", "EMAIL USUARIO", "ID EVENTO", "TÍTULO EVENTO"));
+        System.out.println("---------------------------------------------");
 
-        // Recorremos los favoritos
-        for (Favorito fav : favoritos) {
-            // Obtenemos el evento para mostrar su título
+        // 3. Recorremos la colección de favoritos
+        favoritos.forEach((fav) -> {
+            // --- Validación del Correo ---
+            String correo;
+            if (fav.getCorreoUsuario() != null) {
+                correo = fav.getCorreoUsuario();
+            } else {
+                correo = "Desconocido";
+            }
+
+            // Buscamos el objeto Evento en nuestro HashMap de eventos usando el ID
             Evento evento = eventos.get(fav.getIdEvento());
-            // Si el evento existe, mostramos su título; si no, mostramos "N/A"
-            String tituloEvento = (evento != null) ? evento.getTitulo() : "N/A";
 
-            System.out.println(String.format("%-30s | %-10d | %-20s",
-                    fav.getCorreoUsuario(),
-                    fav.getIdEvento(),
-                    truncar(tituloEvento, 20)));
-        }
+            String tituloEvento;
+            if (evento != null && evento.getTitulo() != null) { // Si el evento existe y tiene título, lo truncamos                
+                tituloEvento = truncar(evento.getTitulo(), 20);
+            } else { // Si el evento fue borrado o no tiene título
+                tituloEvento = "N/A o No se ha encontrado";
+            }
+
+            // 4. Impresión de la fila
+            System.out.println(String.format(formato, correo, fav.getIdEvento(), tituloEvento));
+        });
     }
 
     /**
@@ -530,214 +598,15 @@ private static void añadirEvento() {
      * @return El texto truncado o el original si no excede el límite
      */
     private static String truncar(String texto, int maxLargo) {
-        // Si el texto es null, retornamos cadena vacía para evitar NullPointerException
-        if (texto == null) {
+        if (texto == null) { // Si el texto es null, retornamos cadena vacía
             return "";
         }
-        // Si el texto es más largo que el máximo, truncamos y añadimos "..."
-        if (texto.length() > maxLargo) {
-            // substring(0, n) extrae los primeros n caracteres
-            return texto.substring(0, maxLargo - 3) + "...";
+        if (texto.length() <= maxLargo) { //Si el texto es más corto que el máximo, no hay nada que hacer
+            return texto;
         }
-        // Si no excede el límite, retornamos el texto original
-        return texto;
-    }
-}
-    
-    /**
-
-    // --------------------------------------------------------------------
-    // FUNCIONALIDADES PRINCIPALES
-    // --------------------------------------------------------------------
-
-    private static void agregarUsuario(String nombre, String email, String password, Scanner teclado) {
-        System.out.println("\n--- Añadir Usuario ---");
-        teclado.nextLine();//Limpieza del buffer
-        System.out.print("Nombre: ");
-        nombre = teclado.nextLine().toLowerCase().trim();//.trim limpia los espacios de los extremos
-        System.out.print("Email: ");
-        email = teclado.nextLine().toLowerCase().trim();
-        System.out.print("Password: ");
-        password = teclado.nextLine();
-
-        if (usuarios.containsKey(email)) {
-            System.out.println("El usuario ya existe.");
-        } else {
-            Usuario nuevoUsuario = new Usuario(nombre, email, password);
-            usuarios.put(email, nuevoUsuario);
-            System.out.println("Usuario creado correctamente.");
+        if (maxLargo <= 3) {//Verificamos que el maxLargo sea suficiente para poner los puntos "..."  Si el límite es muy pequeño (menor a 3)
+            return texto.substring(0, maxLargo);
         }
-    }
-
-    private static void eliminarUsuario() {
-        System.out.println("\n--- Eliminar Usuario ---");
-        System.out.print("Email: ");
-        String email = scanner.nextLine();
-
-        if (usuarios.remove(email) != null) {
-            System.out.println("Usuario eliminado correctamente.");
-        } else {
-            System.out.println("El usuario no existe.");
-        }
-    }
-
-    private static void agregarEvento() {
-        System.out.println("\n--- Añadir Evento ---");
-        System.out.print("Título: ");
-        String titulo = scanner.nextLine();
-        System.out.print("Fecha: ");
-        String fecha = scanner.nextLine();
-        System.out.print("Ubicación: ");
-        String ubicacion = scanner.nextLine();
-        System.out.print("Descripción: ");
-        String descripcion = scanner.nextLine();
-
-        Eventos nuevoEvento = new Eventos(contadorEventos++, fecha, titulo, ubicacion, descripcion);
-        eventos.put(nuevoEvento.getId(), nuevoEvento);
-        System.out.println("Evento creado correctamente.");
-    }
-
-    private static void eliminarEvento() {
-        System.out.println("\n--- Eliminar Evento ---");
-        mostrarEventos();
-        int id = leerEntero("Ingrese ID del evento a eliminar: ");
-
-        if (eventos.remove(id) != null) {
-            System.out.println("Evento eliminado correctamente.");
-        } else {
-            System.out.println("El evento no existe.");
-        }
-    }
-
-    private static void agregarGaleria() {
-        System.out.println("\n--- Añadir Galería ---");
-        mostrarEventos();
-        int idEvento = leerEntero("ID del evento: ");
-
-        if (!eventos.containsKey(idEvento)) {
-            System.out.println("El evento no existe.");
-            return;
-        }
-
-        System.out.print("Título de la galería: ");
-        String titulo = scanner.nextLine();
-
-        Galeria nuevaGaleria = new Galeria(contadorGalerias++, titulo, idEvento);
-        eventos.get(idEvento).getGalerias().add(nuevaGaleria);
-        System.out.println("Galería creada correctamente.");
-    }
-
-    private static void eliminarGaleria() {
-        System.out.println("\n--- Eliminar Galería ---");
-        mostrarEventos();
-        int idEvento = leerEntero("ID del evento: ");
-
-        if (!eventos.containsKey(idEvento)) {
-            System.out.println("El evento no existe.");
-            return;
-        }
-
-        Eventos evento = eventos.get(idEvento);
-        mostrarGalerias(evento);
-
-        int idGaleria = leerEntero("ID de la galería: ");
-        boolean encontrada = evento.getGalerias().removeIf(g -> g.getId() == idGaleria);
-
-        if (encontrada) {
-            System.out.println("Galería eliminada correctamente.");
-        } else {
-            System.out.println("La galería no existe.");
-        }
-    }
-
-    private static void agregarFavorito() {
-        System.out.println("\n--- Añadir Favorito ---");
-        mostrarUsuarios();
-        mostrarEventos();
-
-        System.out.print("Email del usuario: ");
-        String email = scanner.nextLine();
-        int idEvento = leerEntero("ID del evento: ");
-
-        if (!usuarios.containsKey(email)) {
-            System.out.println("El usuario no existe.");
-            return;
-        }
-
-        if (!eventos.containsKey(idEvento)) {
-            System.out.println("El evento no existe.");
-            return;
-        }
-
-        favoritos.add(new Favorito(email, idEvento));
-        System.out.println("Favorito creado correctamente.");
-    }
-
-    private static void eliminarFavorito() {
-        System.out.println("\n--- Eliminar Favorito ---");
-        mostrarFavoritos();
-        System.out.print("Email: ");
-        String email = scanner.nextLine();
-        int idEvento = leerEntero("ID del evento: ");
-
-        boolean eliminado = favoritos.removeIf(f ->
-                f.getCorreoUsuario().equalsIgnoreCase(email) && f.getIdEvento() == idEvento);
-
-        if (eliminado) {
-            System.out.println("Favorito eliminado correctamente.");
-        } else {
-            System.out.println("El favorito no existe.");
-        }
-    }
-
-    // --------------------------------------------------------------------
-    // MÉTODOS AUXILIARES
-    // --------------------------------------------------------------------
-
-    private static void mostrarEventos() {
-        System.out.println("\nLista de Eventos:");
-        if (eventos.isEmpty()) {
-            System.out.println("No hay eventos registrados.");
-        } else {
-            eventos.values().forEach(System.out::println);
-        }
-    }
-
-    private static void mostrarUsuarios() {
-        System.out.println("\nLista de Usuarios:");
-        if (usuarios.isEmpty()) {
-            System.out.println("No hay usuarios registrados.");
-        } else {
-            usuarios.values().forEach(System.out::println);
-        }
-    }
-
-    private static void mostrarGalerias(Eventos evento) {
-        System.out.println("\nGalerías del evento: " + evento.getTitulo());
-        if (evento.getGalerias().isEmpty()) {
-            System.out.println("No hay galerías registradas.");
-        } else {
-            evento.getGalerias().forEach(System.out::println);
-        }
-    }
-
-    private static void mostrarFavoritos() {
-        System.out.println("\nLista de Favoritos:");
-        if (favoritos.isEmpty()) {
-            System.out.println("No hay favoritos registrados.");
-        } else {
-            favoritos.forEach(System.out::println);
-        }
-    }
-
-    private static int leerEntero(String mensaje) {
-        while (true) {
-            try {
-                System.out.print(mensaje);
-                return Integer.parseInt(scanner.nextLine());
-            } catch (NumberFormatException e) {
-                System.out.println("Entrada inválida. Debe ser un número.");
-            }
-        }
+        return texto.substring(0, maxLargo - 3) + "..."; //Truncamos y añadimos los puntos suspensivos
     }
 }

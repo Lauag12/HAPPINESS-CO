@@ -1,7 +1,7 @@
 /** @author ALUMNOS-FP
      * @version 1.0
      */
-package happinessCo; 
+package happinessco; 
 
     public class Galeria {
 
