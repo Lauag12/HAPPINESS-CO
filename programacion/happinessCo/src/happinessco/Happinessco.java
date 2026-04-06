@@ -166,7 +166,7 @@ public class Happinessco {
             Evento nuevoEvento = new Evento(contadorEventos, fecha, titulo, ubicacion, descripcion);
             eventos.put(contadorEventos, nuevoEvento);
 
-            System.out.println("✅ Evento '" + titulo + "' guardado con ID " + contadorEventos);
+            System.out.println("Evento '" + titulo + "' guardado con ID " + contadorEventos);
 
             // 3. Aumentamos el contador para el siguiente
             contadorEventos++;
