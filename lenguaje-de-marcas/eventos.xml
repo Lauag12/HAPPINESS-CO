@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>HAPPINESS&Co; - Próximos Eventos</title>
+        <link>index.html</link>
+        <description>Agenda cultural de HAPPINESS&Co;: Música, Arte y Cine.</description>
+        <language>es</language>
+        
+        <item>
+            <title>Las mujeres del Huila intérpretes de instrumentos de viento</title>
+            <link>https://github.com/Lauag12/HAPPINESS-CO/blob/main/lenguaje-de-marcas/evento-mujeres-huila.html</link>
+            <description>Conversación sobre el papel de las mujeres en la música de viento.</description>
+            <pubDate>Fri, 27 Mar 2026 10:00:00 GMT</pubDate>
+            <category>Música</category>
+        </item>
+        
+        <item>
+            <title>Exposición permanente del museo de Botero</title>
+            <link>https://github.com/Lauag12/HAPPINESS-CO/blob/main/lenguaje-de-marcas/evento-botero.html</link>
+            <description>Testimonio de uno de los actos de generosidad cultural más importantes de Colombia.</description>
+            <pubDate>Wed, 29 Apr 2026 09:00:00 GMT</pubDate>
+            <category>Arte</category>
+        </item>
+        <item>
+            <title>https://github.com/Lauag12/HAPPINESS-CO/blob/main/lenguaje-de-marcas/evento-museo-oro.html</title>
+            <link>evento-museo-oro.html</link>
+            <description>Exploración de la riqueza cultural y artística de la región.</description>
+            <pubDate>Fri, 5 Jun 2026 10:00:00 GMT</pubDate>
+            <category>Arte</category>
+        </item>
+        <item>
+            <title>https://github.com/Lauag12/HAPPINESS-CO/blob/main/lenguaje-de-marcas/evento-corales.html</title>
+            <link>evento-corales.html</link>
+            <description>Una revisión científica y estética fundamental que complementa las observaciones realizadas por el naturalista</description>
+            <pubDate>Fri, 5 Jun 2026 11:00:00 GMT</pubDate>
+            <category>Arte</category>
+        </item>
+        <item>
+            <title>Agua</title>
+            <link>ehttps://github.com/Lauag12/HAPPINESS-CO/blob/main/lenguaje-de-marcas/evento-agua.html</link>
+            <description>Se explorará el papel crucial del agua en la evolución de las especies.</description>
+            <pubDate>Mon, 15 Jun 2026 18:00:00 GMT</pubDate>
+            <category>Arte</category>
+        </item>
+        <item>
+            <title>https://github.com/Lauag12/HAPPINESS-CO/blob/main/lenguaje-de-marcas/evento-cine.html</title>
+            <link>evento-cine.html</link>
+            <description>El Festival de Cine Popel es un evento cultural que celebra el cine independiente y de autor.</description>
+            <pubDate>Mon, 25 Jun 2026 18:00:00 GMT</pubDate>
+            <category>Cine</category>
+        </item>
+        
+        
+    </channel>
+</rss>
