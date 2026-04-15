@@ -1,29 +1,29 @@
 Autor
-Nombre: Laura Camila Aguirre Vergel
-Ciclo: Desarrollo de Aplicaciones Web (DAW)
-Institución: Tunivers
-Fecha: 23 de marzo de 2026 - 17 de abril de 2026
+-Nombre: Laura Camila Aguirre Vergel<br>
+-Ciclo: Desarrollo de Aplicaciones Web (DAW)<br>
+-Institución: Tunivers<br>
+-Fecha: 23 de marzo de 2026 - 17 de abril de 2026<br>
 
 
-📂 Estructura del proyecto
-
-HAPPINESS-CO/
-│
-├── index.html
-├── eventos.html
-├── historial.html
-├── contacto.html
-├── sobre-nosotros.html
-├── fuentes.html
-│
-├── eventos.xml (RSS)
-│
-├── /img
-├── /css (si aplica)
-├── /java
-├── /database
-│
-└── README.md
+📂 Estructura del proyecto<br>
+<br>
+HAPPINESS-CO/<br>
+│<br>
+├── index.html<br>
+├── eventos.html<br>
+├── historial.html<br>
+├── contacto.html<br>
+├── sobre-nosotros.html<br>
+├── fuentes.html<br>
+│<br>
+├── eventos.xml (RSS)<br>
+│<br>
+├── /img<br>
+├── /css<br>
+├── /java<br>
+├── /database<br>
+│<br>
+└── README.md<br>
 
 
 🎭 HAPPINESS&Co - Agenda Cultural
@@ -93,7 +93,7 @@ Gris → Otros
     Galerías asociadas a eventos
     Feed RSS para suscripción a eventos
     Tecnologías utilizadas
-    
+
 HTML5 → Estructura semántica del sitio
 CSS3 + Tailwind CSS → Estilos y diseño responsive
 Java → Lógica de programación (POO)

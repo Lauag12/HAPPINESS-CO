@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HAPPINESS&Co | Sobre</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="assets/img/happiness/happines-and-co-upper-02.png" type="image/x-icon">
 </head>
 
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
@@ -86,7 +87,7 @@
             <section
                 class="flex flex-col items-center gap-8 md:flex-row bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-[#ba007c]">
                 <img src="assets/img/happiness/Sobre nosotros/ocio-1.png" alt="Ocio"
-                    class="w-full max-w-[300px] rounded-lg object-cover shadow-sm">
+                    class="w-full max-w-[300px] rounded-lg object-cover shadow-sm animate-bounce-slow">
                 <div class="flex-1">
                     <p class="text-lg leading-relaxed">
                         <span class="font-bold text-[#ba007c]">HAPPINESS&Co</span> es una empresa joven y
@@ -103,7 +104,7 @@
             <section
                 class="flex flex-col items-center gap-8 md:flex-row-reverse bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-r-4 border-[#ff7b00]">
                 <img src="assets/img/happiness/Sobre nosotros/cultura-1.png" alt="Cultura"
-                    class="w-full max-w-[300px] rounded-lg object-cover shadow-sm">
+                    class="w-full max-w-[300px] rounded-lg object-cover shadow-sm animate-bounce-slow">
                 <div class="flex-1">
                     <p class="text-lg leading-relaxed md:text-left">
                         Y así surgió <span class="font-bold text-[#ff7b00]">HAPPINESS&Co</span>: una agenda cultural que
@@ -120,18 +121,35 @@
             <section
                 class="flex flex-col items-center gap-8 md:flex-row bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border-l-4 border-[#009bdb]">
                 <img src="assets/img/happiness/Sobre nosotros/cultura-2.png" alt="Eventos"
-                    class="w-full max-w-[300px] rounded-lg object-cover shadow-sm">
-                <div class="flex-1">
-                    <p class="text-lg leading-relaxed">
-                        La nuestra no es solo una aplicación o una web; es una comunidad de amantes de la cultura que
-                        comparten el mismo objetivo: vivir la ciudad al máximo. Con HAPPINESS&Co, la oferta cultural
-                        deja de ser un laberinto y se convierte en una invitación abierta a disfrutar. <span
-                            class="font-bold text-[#009bdb]">¡Bienvenidos a HAPPINESS&Co!</span>
-                    </p>
+                    class="w-full max-w-[300px] rounded-lg object-cover shadow-sm animate-bounce-slow        <div class="
+                    flex-1">
+                <p class="text-lg leading-relaxed">
+                    La nuestra no es solo una aplicación o una web; es una comunidad de amantes de la cultura que
+                    comparten el mismo objetivo: vivir la ciudad al máximo. Con HAPPINESS&Co, la oferta cultural
+                    deja de ser un laberinto y se convierte en una invitación abierta a disfrutar. <span
+                        class="font-bold text-[#009bdb]">¡Bienvenidos a HAPPINESS&Co!</span>
+                </p>
                 </div>
             </section>
         </article>
 
+        <style>
+            @keyframes bounce-slow {
+
+                0%,
+                100% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+
+            .animate-bounce-slow {
+                animation: bounce-slow 3s ease-in-out infinite;
+            }
+        </style>
         <hr class="my-16 border-t border-gray-200">
 
         <section class="space-y-12">
@@ -142,8 +160,8 @@
                     <article
                         class="group flex flex-col items-center rounded-2xl bg-gray-50 p-8 text-center transition-all hover:bg-white hover:shadow-xl">
                         <div class="mb-4 p-1 rounded-full ring-2 ring-[#ba007c]">
-                            <img src="assets/img/happiness/Sobre nosotros/prof-3.png" class="h-24 w-24 rounded-full object-cover"
-                                alt="Socio">
+                            <img src="assets/img/happiness/Sobre nosotros/prof-3.png"
+                                class="h-24 w-24 rounded-full object-cover" alt="Socio">
                         </div>
                         <h3 class="text-xl font-bold text-[#ba007c]">Juan Pérez</h3>
                         <p class="text-sm font-semibold uppercase tracking-wider text-[#ff7b00]">Director</p>
@@ -154,8 +172,8 @@
                     <article
                         class="group flex flex-col items-center rounded-2xl bg-gray-50 p-8 text-center transition-all hover:bg-white hover:shadow-xl">
                         <div class="mb-4 p-1 rounded-full ring-2 ring-[#009bdb]">
-                            <img src="assets/img/happiness/Sobre nosotros/prof-1.png" class="h-24 w-24 rounded-full object-cover"
-                                alt="Socio">
+                            <img src="assets/img/happiness/Sobre nosotros/prof-1.png"
+                                class="h-24 w-24 rounded-full object-cover" alt="Socio">
                         </div>
                         <h3 class="text-xl font-bold text-[#009bdb]">Ana Gómez</h3>
                         <p class="text-sm font-semibold uppercase tracking-wider text-[#ff7b00]">Curadora</p>
@@ -166,8 +184,8 @@
                     <article
                         class="group flex flex-col items-center rounded-2xl bg-gray-50 p-8 text-center transition-all hover:bg-white hover:shadow-xl">
                         <div class="mb-4 p-1 rounded-full ring-2 ring-[#555555]">
-                            <img src="assets/img/happiness/Sobre nosotros/prof-2.png" class="h-24 w-24 rounded-full object-cover"
-                                alt="Socio">
+                            <img src="assets/img/happiness/Sobre nosotros/prof-2.png"
+                                class="h-24 w-24 rounded-full object-cover" alt="Socio">
                         </div>
                         <h3 class="text-xl font-bold text-[#555555]">Luisa Rivas</h3>
                         <p class="text-sm font-semibold uppercase tracking-wider text-[#ff7b00]">Comunicación</p>
