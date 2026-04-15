@@ -1,3 +1,4 @@
+```
 Autor
 -Nombre: Laura Camila Aguirre Vergel
 -Ciclo: Desarrollo de Aplicaciones Web (DAW)
@@ -137,3 +138,4 @@ XML (RSS) → Distribución de contenido
 Git & GitHub → Control de versiones
 Figma → Diseño de interfaz (UI) y experiencia de usuario (UX)
 
+```
