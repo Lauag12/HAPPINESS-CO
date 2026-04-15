@@ -1,29 +1,64 @@
 Autor
--Nombre: Laura Camila Aguirre Vergel<br>
--Ciclo: Desarrollo de Aplicaciones Web (DAW)<br>
--Institución: Tunivers<br>
--Fecha: 23 de marzo de 2026 - 17 de abril de 2026<br>
+-Nombre: Laura Camila Aguirre Vergel
+-Ciclo: Desarrollo de Aplicaciones Web (DAW)
+-Institución: Tunivers
+-Fecha: 23 de marzo de 2026 - 17 de abril de 2026
 
 
-📂 Estructura del proyecto<br>
-<br>
-HAPPINESS-CO/<br>
-│<br>
-├── index.html<br>
-├── eventos.html<br>
-├── historial.html<br>
-├── contacto.html<br>
-├── sobre-nosotros.html<br>
-├── fuentes.html<br>
-│<br>
-├── eventos.xml (RSS)<br>
-│<br>
-├── /img<br>
-├── /css<br>
-├── /java<br>
-├── /database<br>
-│<br>
-└── README.md<br>
+📂 Estructura del proyecto
+
+HAPPINESS-CO/
+│
+├── bases de datos
+│   
+├── informe
+│   
+├── lenguaje de marcas/
+│   ├── assets/
+│   │   ├── img/
+│   │   │   ├── eventos
+│   │   │   │   ├── Agua
+│   │   │   │   ├── Artes.escenicas
+│   │   │   │   ├── Botero
+│   │   │   │   ├── Centro Niemeyer
+│   │   │   │   ├── Cine
+│   │   │   │   ├── Coral Darwin
+│   │   │   │   ├── Huele a parentesco
+│   │   │   │   ├── Mercado Aviles
+│   │   │   │   ├── Mujeres Huila
+│   │   │   │   ├── Museo del oro
+│   │   │   │   
+│   │   │   ├── happiness
+│   │   │   │   ├── Sobre nosotros
+│   │   │   │   
+│   │   │   ├── mockup
+│   │   │   │   ├── Historial
+│   │   │   │   ├── Inicio
+│   │
+│   ├── css/
+│   ├── contacto.html
+│   ├── evento-agua.html
+│   ├── evento-botero.html
+│   ├── evento-cine.html
+│   ├── evento-corales.html
+│   ├── evento-huele-parentesco.html
+│   ├── evento-mercado-aviles.html
+│   ├── evento-mujeres-huila.html
+│   ├── evento-museo-oro.html
+│   ├── eventos.html
+│   ├── eventos.xml
+│   ├── evento-artes.html
+│   ├── fuentes.html
+│   ├── historial.html
+│   ├── index.html
+│   ├── sobre-nosotros.html
+│   
+├── programacion
+│   ├── happinessCo/
+│   
+├── rss
+│
+└── README.md
 
 
 🎭 HAPPINESS&Co - Agenda Cultural
