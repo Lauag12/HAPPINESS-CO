@@ -64,7 +64,7 @@ HAPPINESS-CO/
 ```
 ---
 
-#🎭 HAPPINESS&Co - Agenda Cultural
+# 🎭 HAPPINESS&Co - Agenda Cultural
 
 ---
 
@@ -166,13 +166,3 @@ Durante el desarrollo del proyecto se fortalecieron los siguientes conocimientos
 * **Figma** → Diseño de interfaz (UI) y experiencia de usuario (UX)
 
 ---
-
-## 🎯 Mejora aplicada (para tu informe)
-
-Este formato mejora porque:
-
-* ✔ Aumenta la **jerarquía visual** (títulos claros)
-* ✔ Mejora la **escaneabilidad** (listas y separaciones)
-* ✔ Reduce la carga cognitiva
-* ✔ Da apariencia **profesional y técnica**
-
