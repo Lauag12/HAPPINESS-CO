@@ -68,66 +68,104 @@
             </div>
         </nav>
     </header>
-<main>
-<section class="bg-gray-50 py-16 px-6 md:px-20">
-    <header class="max-w-3xl mx-auto text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-black uppercase italic tracking-tight text-gray-900 mb-4">
-            Ponte en contacto <span class="text-[#ba007c]">con nosotros</span>
-        </h2>
-        <p class="text-gray-600 font-light italic">
-            Estamos aquí para resolver tus dudas sobre las exposiciones y eventos.
-        </p>
-    </header>
-
-    <form action="#" method="POST" class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-8 md:p-12 shadow-xl rounded-sm border-t-4 border-[#ba007c]">
+<main class="bg-gray-50 py-16 px-6 md:px-20">
+    <div class="max-w-6xl mx-auto">
         
-        <fieldset class="flex flex-col">
-            <label for="nombre" class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" 
-                class="border-b-2 border-gray-200 focus:border-[#ba007c] outline-none py-2 transition-colors duration-300">
-        </fieldset>
+        <header class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-black uppercase italic tracking-tight text-gray-900 mb-4">
+                Ponte en contacto <span class="text-[#ba007c]">con nosotros</span>
+            </h2>
+            <p class="text-gray-600 font-light italic max-w-xl mx-auto">
+                ¿Tienes dudas sobre una exposición o quieres organizar una visita grupal? Estamos a un mensaje de distancia.
+            </p>
+        </header>
 
-        <fieldset class="flex flex-col">
-            <label for="apellidos" class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Apellidos</label>
-            <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" 
-                class="border-b-2 border-gray-200 focus:border-[#ba007c] outline-none py-2 transition-colors duration-300">
-        </fieldset>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            
+            <div class="lg:col-span-1 space-y-10">
+                <div>
+                    <h3 class="text-xl font-black uppercase mb-6 border-l-4 border-[#ba007c] pl-4">Datos Directos</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <span class="text-[#ba007c] mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </span>
+                            <div>
+                                <p class="font-bold text-gray-900 uppercase text-xs tracking-widest">Ubicación</p>
+                                <p class="text-gray-600">Calle 6 # 15-88, La Candelaria<br>Bogotá, Colombia</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="text-[#ba007c] mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </span>
+                            <div>
+                                <p class="font-bold text-gray-900 uppercase text-xs tracking-widest">Teléfono / WhatsApp</p>
+                                <a href="https://wa.me/573000000000" class="text-gray-600 hover:text-[#ba007c] transition-colors">+57 300 000 0000</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
 
-        <fieldset class="flex flex-col">
-            <label for="email" class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Email</label>
-            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" 
-                class="border-b-2 border-gray-200 focus:border-[#ba007c] outline-none py-2 transition-colors duration-300">
-        </fieldset>
-
-        <fieldset class="flex flex-col">
-            <label for="telefono" class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000" 
-                class="border-b-2 border-gray-200 focus:border-[#ba007c] outline-none py-2 transition-colors duration-300">
-        </fieldset>
-
-        <fieldset class="flex flex-col md:col-span-2">
-            <label for="comentario" class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Comentario</label>
-            <textarea id="comentario" name="comentario" rows="4" placeholder="¿En qué podemos ayudarte?" 
-                class="border-b-2 border-gray-200 focus:border-[#ba007c] outline-none py-2 transition-colors duration-300 resize-none"></textarea>
-        </fieldset>
-
-        <footer class="md:col-span-2 space-y-6">
-            <div class="flex items-center gap-3 py-2">
-                <input type="checkbox" id="suscribir" name="suscribir" 
-                    class="w-4 h-4 accent-[#ba007c] cursor-pointer">
-                <label for="suscribir" class="text-sm text-gray-600 cursor-pointer">
-                    Autorizo mi inscripción en la base de suscriptores para recibir noticias.
-                </label>
+                <div class="w-full h-64 bg-gray-200 rounded-sm overflow-hidden shadow-inner grayscale hover:grayscale-0 transition-all duration-700">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.0583161062634!2d-74.0743606!3d4.5963507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a1068a0a4d%3A0x6b77207902127a3c!2sMuseo%20del%20Oro!5e0!3m2!1ses!2sco!4v1710000000000!5m2!1ses!2sco" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
 
-            <button type="submit" 
-                class="w-full bg-black text-white py-4 text-sm font-black rounded-sm uppercase tracking-widest hover:bg-[#ba007c] transition-colors duration-500">
-                Enviar Mensaje
-            </button>
-        </footer>
+            <div class="lg:col-span-2">
+                <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white p-8 md:p-12 shadow-2xl rounded-sm border-t-4 border-[#ba007c] relative overflow-hidden">
+                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-gray-50 rotate-45 pointer-events-none"></div>
 
-    </form>
-</section>
+                    <fieldset class="flex flex-col">
+                        <label for="nombre" class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-1">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan" 
+                            class="border-b border-gray-200 focus:border-[#ba007c] outline-none py-3 transition-all duration-300 placeholder:text-gray-300">
+                    </fieldset>
+
+                    <fieldset class="flex flex-col">
+                        <label for="email" class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-1">Email Corporativo</label>
+                        <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com" 
+                            class="border-b border-gray-200 focus:border-[#ba007c] outline-none py-3 transition-all duration-300 placeholder:text-gray-300">
+                    </fieldset>
+
+                    <fieldset class="flex flex-col md:col-span-2">
+                        <label for="asunto" class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-1">Motivo de consulta</label>
+                        <select id="asunto" name="asunto" class="border-b border-gray-200 focus:border-[#ba007c] outline-none py-3 bg-white text-gray-600">
+                            <option value="visita">Planeación de Visita</option>
+                            <option value="eventos">Información sobre Eventos</option>
+                            <option value="prensa">Sugerencias</option>
+                            <option value="otro">Otros asuntos</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset class="flex flex-col md:col-span-2">
+                        <label for="comentario" class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 mb-1">Mensaje</label>
+                        <textarea id="comentario" name="comentario" rows="4" placeholder="Cuéntanos cómo podemos ayudarte..." 
+                            class="border-b border-gray-200 focus:border-[#ba007c] outline-none py-3 transition-all duration-300 resize-none placeholder:text-gray-300"></textarea>
+                    </fieldset>
+
+                    <footer class="md:col-span-2 pt-4">
+                        <div class="flex items-start gap-3 mb-8">
+                            <input type="checkbox" id="suscribir" name="suscribir" class="mt-1 w-4 h-4 accent-[#ba007c] cursor-pointer">
+                            <label for="suscribir" class="text-xs text-gray-500 leading-relaxed cursor-pointer">
+                                Acepto la política de tratamiento de datos</a> y deseo recibir actualizaciones mensuales.
+                            </label>
+                        </div>
+
+                        <button type="submit" 
+                            class="group relative w-full bg-black text-white py-5 text-xs font-black rounded-sm uppercase tracking-[0.3em] overflow-hidden transition-all duration-500 hover:bg-[#ba007c]">
+                            <span class="relative z-10">Enviar Mensaje</span>
+                        </button>
+                    </footer>
+                </form>
+            </div>
+        </div>
+    </div>
 </main>
 <footer class="bg-white border-t border-gray-100 py-16 mt-20">
   <div class="max-w-[1000px] mx-auto px-4 text-center">

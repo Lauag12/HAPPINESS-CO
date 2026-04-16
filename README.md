@@ -138,7 +138,7 @@ Durante el desarrollo del proyecto se fortalecieron los siguientes conocimientos
 * 📅 Visualización de eventos culturales
 * 🎨 Clasificación por categorías mediante colores:
 
-  * 🩷 **Rosa** → Música
+  * 🔴 **Rosa** → Música
   * 🔵 **Azul** → Cine / Teatro
   * 🟠 **Naranja** → Exposiciones
   * ⚫ **Gris** → Otros
