@@ -61,7 +61,10 @@ HAPPINESS-CO/
 │
 └── README.md
 
-# 🎭 HAPPINESS&Co - Agenda Cultural
+```
+---
+
+#🎭 HAPPINESS&Co - Agenda Cultural
 
 ---
 
@@ -173,4 +176,3 @@ Este formato mejora porque:
 * ✔ Reduce la carga cognitiva
 * ✔ Da apariencia **profesional y técnica**
 
-```
